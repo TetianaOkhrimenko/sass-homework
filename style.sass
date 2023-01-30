@@ -1,0 +1,172 @@
+@font-face 
+  font-family: "Basis Grotesque Pro"
+  src: url(/fonts/BasisGrotesquePro-Light.woff2) format(woff2)
+  src: url(/fonts/BasisGrotesquePro-Light.woff) format(woff)
+  font-weight: 300
+
+
+@font-face 
+  font-family: "Basis Grotesque Pro"
+  src: url(/fonts/BasisGrotesquePro-Medium.woff2) format(woff2)
+  src: url(/fonts/BasisGrotesquePro-Medium.woff) format(woff)
+  font-weight: 400
+
+
+@font-face 
+  font-family: "Basis Grotesque Pro"
+  src: url(/fonts/BasisGrotesquePro-Bold.woff2) format(woff2)
+  src: url(/fonts/BasisGrotesquePro-Bold.woff) format(woff)
+  font-weight: 700
+
+
+* 
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+$primary-color: #000000
+
+%font-basic
+  font-family: 'Basis Grotesque Pro'
+  font-size: 16px
+  line-height: 24px
+  letter-spacing: -0.03em
+
+%font-heading
+  font-family: 'Basis Grotesque Pro'
+  font-size: 36px
+  line-height: 40px
+  letter-spacing: -0.03em
+  text-transform: uppercase
+ 
+
+@mixin font-style($color, $opacity, $font-weight)
+  color: $color
+  opacity: $opacity
+  font-weight: $font-weight
+
+@mixin mb($margin-bottom)
+  margin-bottom: $margin-bottom
+
+@mixin grid($first, $second)
+  display: grid
+  grid-template-columns: $first $second
+
+
+.text-blue
+  @extend %font-basic
+  +font-style(#0536FC, 0.9, 700)
+  +mb(30px)
+  text-transform: uppercase
+
+.text-light
+   @extend %font-basic
+   +font-style($primary-color, 0.35, 300)
+
+.dash-long
+   height: 1px
+   background: $primary-color
+   opacity: 0.15
+   +mb(30px)
+
+.dash
+   width: 15px
+   height: 1.4px
+   background: $primary-color
+   justify-self: flex-end
+   cursor: pointer
+
+.support
+   +grid(1fr, 1fr)
+   padding: 150px 210px
+   
+  
+.support__title
+   @extend %font-heading
+   +mb(70px)
+
+.support__heading
+   @extend %font-basic
+   +font-style($primary-color, 1, 700)
+   text-transform: uppercase
+   +mb(70px)
+
+.support__item:nth-of-type(3) .support__heading
+   width: 285px
+
+.support__item:nth-of-type(4) .support__heading
+   width: 300px
+
+.support__paragraph
+   @extend %font-basic
+   +font-style($primary-color, 0.6, 400)
+   +mb(70px)
+   width: 420px
+
+.support__list
+   padding-top: 234px
+
+
+.support__item
+   width: 456px
+
+.support__grid
+   +grid(90%, 10%)
+   
+.support__plus-icon
+   width: 15px
+   height: 15px
+   justify-self: flex-end
+   cursor: pointer
+
+@media (max-width:900px)
+
+    @mixin grid($first)
+       display: grid
+       grid-template-columns: $first
+
+    %font-heading
+       font-size: 28px
+       line-height: 1.2
+       +mb(20px)
+
+    .media-width
+       width: 100%
+
+    .support 
+       +grid(1fr)
+       padding: 2rem 1rem
+
+
+    .support__list
+        padding-top: 20px
+
+    .support__heading  
+        +mb(20px)
+
+    .support__item:nth-of-type(3) .support__heading
+        width: 100%
+
+    .support__item:nth-of-type(4) .support__heading
+        width: 100%
+
+
+@media (min-width:601px) and (max-width:900px)
+    .support__list
+        width:80%
+    
+
+@media (min-width:901px) and (max-width:1200px)
+    .support 
+        padding: 4rem
+
+    .support__list
+        padding: 0
+        grid-column: 2/3
+        grid-row: 2/3
+    
+
+
+
+  
+

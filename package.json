@@ -1,13 +1,29 @@
 {
-  "dependencies": {
-    "gulp": "^4.0.2"
-  },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "cssnano": "^5.1.14",
+    "gulp": "^4.0.2",
     "gulp-postcss": "^9.0.1",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "sass": "^1.57.1"
-  }
+  },
+  "name": "sass-homework",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TetianaOkhrimenko/sass-homework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TetianaOkhrimenko/sass-homework/issues"
+  },
+  "homepage": "https://github.com/TetianaOkhrimenko/sass-homework#readme",
+  "description": ""
 }

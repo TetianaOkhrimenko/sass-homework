@@ -51,6 +51,10 @@
   font-weight: 300;
 }
 
+.active {
+  display: block;
+}
+
 .dash-long {
   height: 1px;
   background: #000000;
